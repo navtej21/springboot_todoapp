@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styled Navbar</title>
+    <!-- Link Bootstrap CSS file -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .navbar-custom {
+        background-color: #333;
+      }
+      .navbar-brand,
+      .nav-link,
+      .btn {
+        color: #fff;
+      }
+      .btn-outline-success {
+        color: #fff;
+        border-color: #28a745;
+      }
+      .btn-outline-success:hover {
+        background-color: #28a745;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body style="background-color: black">
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+            <!-- Add your nav links here if needed -->
+          </ul>
+          <form class="form-inline my-2 my-lg-0 ml-auto">
+            <button
+              class="btn btn-outline-success my-2 my-sm-0 mr-2"
+              type="button"
+              (click)="createtodo()"
+            >
+              CreateTodo
+            </button>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="button">
+              LogOut
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Link Bootstrap JavaScript file (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

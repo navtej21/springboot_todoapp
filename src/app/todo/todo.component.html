@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <header><app-header></app-header></header>
+  <body>
+    <table class="table">
+      <thead>
+        <th>Sno</th>
+        <th>Description</th>
+        <th>Date</th>
+        <th>Delete</th>
+        <th>Update</th>
+      </thead>
+
+      <tbody *ngFor="let todo of todos; let i = index">
+        <td>{{ todo.id }}</td>
+        <td>{{ todo.task }}</td>
+        <td>{{ todo.date | date }}</td>
+        <td>
+          <button class="btn-danger" (click)="delete(todo.id)">Delete</button>
+        </td>
+        <td>
+          <button class="btn-warning" (click)="update(todo.id)">Update</button>
+        </td>
+      </tbody>
+    </table>
+  </body>
+</html>
